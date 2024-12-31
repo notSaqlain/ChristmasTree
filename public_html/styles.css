@@ -24,9 +24,17 @@ button {
     background-color: #f0f8ff;
     border: 1px solid black;
 }
+ .decoration {
+   position: absolute;
+   border-radius: 50%;
+ }
 
+ #decorationContainer {
+    position: relative;
+  }
 
 #albero {
+    user-select: none;
     border: 1px solid black;
     background-color: #f0f8ff;
     padding: 10px;
