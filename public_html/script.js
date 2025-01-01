@@ -78,11 +78,3 @@ albero.addEventListener('click', (event) => {
     }, 500);
   }
 });
-
-// Clear all decorations
-function erase() {
-  const decorations = decorationContainer.querySelectorAll('.decoration');
-  decorations.forEach((element) => element.remove());
-}
-
-document.getElementById('resetButton').addEventListener('click', erase);
