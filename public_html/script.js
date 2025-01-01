@@ -4,19 +4,19 @@
  */
 
 const albero = document.getElementById('albero');
-const decorationContainer = document.getElementById('decorationContainer');
+const dekoContainer = document.getElementById('dekoContainer');
 const music = document.getElementById('christmasMusic');
 var isActive = true;
 
 function luci(x, y, radius, color) {
-  const decoration = document.createElement('div');
-  decoration.className = 'decoration';
-  decoration.style.left = `${x - radius}px`;
-  decoration.style.top = `${y - radius}px`;
-  decoration.style.width = `${radius * 2}px`;
-  decoration.style.height = `${radius * 2}px`;
-  decoration.style.backgroundColor = color;
-  decorationContainer.appendChild(decoration);
+  const deko = document.createElement('div');
+  deko.className = 'decoration';
+  deko.style.left = `${x - radius}px`;
+  deko.style.top = `${y - radius}px`;
+  deko.style.width = `${radius * 2}px`;
+  deko.style.height = `${radius * 2}px`;
+  deko.style.backgroundColor = color;
+  dekoContainer.appendChild(deko);
 }
 
 albero.addEventListener('dblclick', (event) => {
