@@ -52,29 +52,3 @@ albero.addEventListener('mousedown', () => {
   document.addEventListener('mouseup', onMouseUp);
 });
 
-// Add a star on the top of the tree
-albero.addEventListener('click', (event) => {
-  const rect = albero.getBoundingClientRect();
-  const x = event.clientX - rect.left;
-  const y = event.clientY - rect.top;
-
-  if (x >= 390 && x <= 410 && y >= 90 && y <= 110) {
-    status = false;
-    const star = document.createElement('div');
-    star.className = 'decoration';
-    star.style.left = `${400 - 10}px`;
-    star.style.top = `${60 - 10}px`;
-    star.style.width = '20px';
-    star.style.height = '20px';
-    star.style.backgroundColor = 'gold';
-    star.style.clipPath =
-      'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)';
-    decorationContainer.appendChild(star);
-
-    music.play();
-    setInterval(() => {
-      document.body.style.backgroundColor =
-        '#' + Math.floor(Math.random() * 16777215).toString(16);
-    }, 500);
-  }
-});
