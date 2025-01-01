@@ -5,6 +5,7 @@
 
 const albero = document.getElementById('albero');
 const dekoContainer = document.getElementById('dekoContainer');
+const replaceButton = document.getElementById('replaceButton');
 const music = document.getElementById('christmasMusic');
 var isActive = true;
 
@@ -46,5 +47,18 @@ albero.addEventListener('mousedown', () => {
 
   document.addEventListener('mousemove', onMouseMove);
   document.addEventListener('mouseup', onMouseUp);
+});
+
+replaceButton.addEventListener('click', () => {
+  if (dekoContainer.querySelector('video')) {
+    location.reload();
+  } else {
+    dekoContainer.innerHTML = `
+      <video autoplay loop style="width: 100%; height: 100%;">
+        <source src="./video/vibe.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    `;
+  }
 });
 
